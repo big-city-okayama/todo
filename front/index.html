@@ -1,13 +1,19 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8">
-    <title>todo</title>
-    <script crossorigin src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
-    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
-  </head>
-  <body>
-    <h1>Index</h1>
-    <div id="root">Text</div>
+    <head>
+        <meta charset="UTF-8">
+        <title>todo</title>
+        <script crossorigin src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
+    </head>
+    <body>
+        <h1>Index</h1>
+        <div id="root">Text</div>
+        <script>
+            // step 1
+            let dom = document.querySelector("#root");
+            let elem = React.createElement("p", {}, "Hello React");
+            ReactDOM.render(elem, dom);
+    </script>
   </body>
 </html>
