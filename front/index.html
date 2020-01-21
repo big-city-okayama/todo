@@ -8,12 +8,23 @@
     </head>
     <body>
         <h1>Index</h1>
+        <button onclick="count()">Count up!</button>
         <div id="root">Text</div>
         <script>
             // step 1
+            // let dom = document.querySelector("#root");
+            // let elem = React.createElement("p", {}, "Hello React");
+            // ReactDOM.render(elem, dom);
+
+            // step 2
+            let cnt = 0;
             let dom = document.querySelector("#root");
-            let elem = React.createElement("p", {}, "Hello React");
-            ReactDOM.render(elem, dom);
-    </script>
-  </body>
+            function count() {
+                cnt++;
+                let elem = React.createElement("p", {}, "Hello React: " + cnt);
+                ReactDOM.render(elem, dom);
+            }
+            count();
+        </script>
+    </body>
 </html>
