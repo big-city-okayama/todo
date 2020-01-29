@@ -76,13 +76,16 @@ class Sample extends React.Component {
         this.setState({ description: event.target.value });
     };
     handleAddTodo = event => {
-        this.state.data.push(
+        let data = this.state.data;
+        let id = this.state.id;
+        data.push(
             {
+                id: id++,
                 title: this.state.title,
                 description: this.state.description
             }
-        )
-        this.setState({ data: this.state.data })
+        );
+        this.setState({ data: data })
     };
 
     render() {
